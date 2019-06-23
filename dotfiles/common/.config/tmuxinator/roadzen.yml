@@ -1,0 +1,47 @@
+name: roadzen
+root: ~/Code/Roadzen
+on_project_start: docker-compose up -d
+pre_window: nvm use default
+windows:
+  - chowkidar:
+      root: ~/Code/Roadzen/chowkidar
+      layout: 3bc1,211x51,0,0{109x51,0,0,1,101x51,110,0[101x25,110,0,7,101x25,110,26,8]}
+      panes:
+        - DEBUG=knex:transaction,knex:query,knex:bindings,RZ:* nodemon --ignore test index.js
+        - docker-compose exec postgres psql -U abhyuditjain chowkidar
+        -
+  - sahayata:
+      root: ~/Code/Roadzen/sahayata
+      layout: 3bc1,211x51,0,0{109x51,0,0,1,101x51,110,0[101x25,110,0,7,101x25,110,26,8]}
+      panes:
+        - DEBUG=knex:transaction,knex:query,knex:bindings,RZ:* nodemon --ignore test index.js
+        - docker-compose exec postgres psql -U abhyuditjain sahayata
+        -
+  - suretrip:
+      root: ~/Code/Roadzen/suretrip
+      layout: 3bc1,211x51,0,0{109x51,0,0,1,101x51,110,0[101x25,110,0,7,101x25,110,26,8]}
+      panes:
+        - yarn dev
+        - docker-compose exec postgres psql -U abhyuditjain suretrip
+        -
+  - tez:
+      root: ~/Code/Roadzen/tez
+      layout: 3bc1,211x51,0,0{109x51,0,0,1,101x51,110,0[101x25,110,0,7,101x25,110,26,8]}
+      panes:
+        - yarn dev
+        - docker-compose exec postgres psql -U abhyuditjain tez
+        -
+  - telematics:
+      root: ~/Code/Roadzen/telematics
+      layout: 3bc1,211x51,0,0{109x51,0,0,1,101x51,110,0[101x25,110,0,7,101x25,110,26,8]}
+      panes:
+        - yarn start:dev
+        - docker-compose exec postgres psql -U abhyuditjain telematics
+        -
+  - kubernetes:
+      root: ~/Code/Roadzen/k8s
+      layout: e65e,211x51,0,0[211x27,0,0,4,211x23,0,28{107x23,0,28,13,103x23,108,28,14}]
+      panes:
+        -
+        -
+        -
