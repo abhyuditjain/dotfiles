@@ -1,6 +1,6 @@
 export GOPATH="$HOME/go"
 export GOROOT="/usr/lib/go"
-export PATH="$GOPATH/bin:$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
+export PATH="$GOPATH/bin:$HOME:.scripts:$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
 
 # PyWal
 cat ~/.cache/wal/sequences 
