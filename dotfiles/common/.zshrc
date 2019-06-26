@@ -223,3 +223,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Rbenv init
 eval "$(rbenv init -)"
+
+# Load spaceship prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# Run neofetch
+neofetch
