@@ -64,7 +64,7 @@ URxvt*font:                       font1,font2,font3
 URxvt*boldFont:                   font1:style=Bold,font2:style=bold,font3
 URxvt*italicFont:                 font1:style=Italic,font2:style=Italic,font3
 URxvt*boldItalicFont:             font1:style=Bold Italic,font2:style=Bold Italic,font3
-!URxvt*letterSpace: -1
+! URxvt*letterSpace: -1
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
