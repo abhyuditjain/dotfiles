@@ -1,6 +1,10 @@
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
 export GOPATH="$HOME/go"
 export GOROOT="/usr/lib/go"
-export PATH="$GOPATH/bin:$HOME:.scripts:$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
+export PATH="$GOPATH/bin:$HOME/.scripts:$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
 
 # PyWal
 cat ~/.cache/wal/sequences 
@@ -230,3 +234,11 @@ prompt spaceship
 
 # Run neofetch
 neofetch
+
+source /usr/bin/aws_zsh_completer.sh
+export WORKON_HOME=$HOME/.virtualenvs
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

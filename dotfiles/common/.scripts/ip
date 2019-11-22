@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Call the geolocation API and capture the output
+curl -s https://ipinfo.io | \
+        jq -r '.ip, .loc, .hostname, .org, .city, .region, .postal, .country' | \
+        while read -r IP; do
+		read -r LOC
+                read -r HOSTNAME
+		read -r ORG
+                read -r CITY
+		read -r REGION
+		read -r POSTAL
+                read -r COUNTRY
+                echo "IP Address: ${IP}"
+		echo "Location: ${LOC}"
+		echo "Hostname: ${HOSTNAME}"
+		echo "Org: ${ORG}"
+		echo "City: ${CITY}"
+		echo "Region: ${REGION}"
+		echo "Postal: ${POSTAL}"
+		echo "Country: ${COUNTRY}" | \
+                        tr --delete \"
+        done
